@@ -48,6 +48,13 @@ These files define reusable reasoning rules for things like:
 
 Projects can override or extend these within their local project context.
 
+## Acknowledgments
+
+The workflows in this repository were inspired by, modified from, and in some cases directly copied from:
+
+- **[claude-code-workflows](https://github.com/OneRedOak/claude-code-workflows)** by Patrick Ellis
+- **[agents](https://github.com/wshobson/agents)** by wshobson
+
 ## Note
 
 This is a personal toolbox. Everything here is tailored to my workflow, my style, and my expectations of agent behavior.  
