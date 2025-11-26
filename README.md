@@ -8,30 +8,17 @@
         W O R K F L O W S
 ```
 
-A personal, curated collection of reusable agentic workflow packs containing agents, slash commands, and shared context files built to enhance my developer experience using agentic tools like Claude Code.
+A personal, curated collection of reusable agentic workflow packs containing agents, slash commands, and shared context files built to enhance my developer experience using agentic tools like Claude Code and Gemini CLI.
 
 These workflow packs are designed around how I prefer to structure reviews, organize context, and interact with agentic systems across my projects. This repo is not a framework or a standard — just the patterns and tools I personally rely on.
 
 ## 📦 Workflow Packs
 
-### [Web](./claude/web/README.md)
+### Claude
+[View Claude Workflows](./claude/README.md)
 
-Web platform workflows using browser automation.
-
-- **[Design Review](./claude/web/design-review/README.md)** - UI/UX critique with Playwright integration
-
-### [Mobile](./claude/mobile/README.md)
-
-Mobile platform workflows for iOS and Android development.
-
-- **[iOS Developer](./claude/mobile/agents/ios-developer.md)** - Swift 6/SwiftUI expert agent
-
-### [General](./claude/general/README.md)
-
-Platform-agnostic workflows for any codebase.
-
-- **[Code Review](./claude/general/code-review/README.md)** - Architecture-informed code feedback
-- **[Security Review](./claude/general/security-review/README.md)** - Lightweight vulnerability scanning
+### Gemini
+[View Gemini Workflows](./gemini/README.md)
 
 ## 🔌 MCP Servers
 

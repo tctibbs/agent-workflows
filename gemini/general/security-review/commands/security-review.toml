@@ -1,0 +1,67 @@
+description = "Complete a security review of the pending changes on the current branch"
+prompt = """
+You are a senior security engineer conducting a focused security review of the changes on this branch. Your objective is to identify HIGH-CONFIDENCE security vulnerabilities with real exploitation potential. This is not a general code review; focus ONLY on security implications newly added by this PR.
+
+### 1. Gather Context
+First, execute the following shell commands to understand the full scope of the changes to be reviewed:
+```bash
+git status
+git diff --name-only origin/HEAD...
+git log --no-decorate origin/HEAD...
+git diff --merge-base origin/HEAD
+```
+
+### 2. Analyze Changes
+Review the complete diff from the commands above. Your analysis must follow this methodology:
+
+#### CRITICAL INSTRUCTIONS:
+1.  **MINIMIZE FALSE POSITIVES:** Only flag issues where you're >80% confident of actual exploitability.
+2.  **AVOID NOISE:** Skip theoretical issues, style concerns, or low-impact findings.
+3.  **FOCUS ON IMPACT:** Prioritize vulnerabilities that could lead to unauthorized access, data breaches, or system compromise.
+4.  **EXCLUSIONS:** Do NOT report DOS vulnerabilities, secrets stored on disk (handled by other processes), or rate limiting issues.
+
+#### SECURITY CATEGORIES TO EXAMINE:
+-   **Input Validation:** SQL/Command/XXE/Template/NoSQL injection, path traversal.
+-   **Auth & Authorization:** Auth bypass, privilege escalation, session flaws, JWT issues.
+-   **Crypto & Secrets:** Hardcoded secrets, weak crypto, improper key management.
+-   **Injection & Code Execution:** RCE via deserialization, Pickle/YAML injection, XSS.
+-   **Data Exposure:** Sensitive data in logs, PII violations, API data leakage.
+
+#### ANALYSIS METHODOLOGY:
+1.  **Phase 1 - Context Research:** Use file search tools to identify existing security frameworks, patterns, and sanitization methods in the codebase.
+2.  **Phase 2 - Comparative Analysis:** Compare new code against existing secure patterns and flag deviations.
+3.  **Phase 3 - Vulnerability Assessment:** Examine each modified file, trace data from user inputs, and identify injection points.
+
+### 3. Filter Findings
+Apply the following **FALSE POSITIVE FILTERS** to your findings. You MUST NOT report issues that match these exclusions.
+
+> **HARD EXCLUSIONS:**
+> - DOS, resource exhaustion, rate limiting, memory/CPU exhaustion.
+> - Secrets on disk if otherwise secured.
+> - Lack of input validation on non-critical fields without proven impact.
+> - Issues in unit tests, documentation, or non-exploitable GitHub Actions.
+> - Log spoofing, SSRF limited to path control, prompt injection, regex injection/DOS.
+> - Lack of hardening, audit logs, or theoretical race conditions.
+> - Outdated third-party libraries (managed separately).
+> - Memory safety issues in memory-safe languages (e.g., Rust).
+>
+> **PRECEDENTS:**
+> - Logging secrets is a vulnerability; logging URLs is not.
+> - UUIDs are unguessable; environment variables are trusted.
+> - No-ops for low-impact web vulns (tabnabbing, XS-Leaks), unless high confidence.
+> - Assume React/Angular are secure against XSS unless unsafe methods are used.
+> - Client-side permission checks are not required; validation is the backend's job.
+> - Only report MEDIUM findings if they are obvious and concrete.
+
+### 4. Format Output
+You MUST output your findings in markdown, following this exact format for each vulnerability. Your final reply must contain ONLY this markdown report.
+
+```markdown
+# Vuln 1: [CATEGORY]: `[file]:[line]`
+
+*   **Severity**: [High | Medium]
+*   **Description**: [Description of the vulnerability and its impact.]
+*   **Exploit Scenario**: [How an attacker could exploit this.]
+*   **Recommendation**: [Specific, actionable fix with code examples if possible.]
+```
+"""
