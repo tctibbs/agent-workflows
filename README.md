@@ -20,6 +20,9 @@ These workflow packs are designed around how I prefer to structure reviews, orga
 ### Gemini
 [View Gemini Workflows](./gemini/README.md)
 
+### Compatibility Matrix
+[View workflow availability by platform](./docs/compatibility.md)
+
 ## 🔌 MCP Servers
 
 Some workflow packs require MCP (Model Context Protocol) servers for enhanced capabilities like browser automation and mobile device control. See [mcp/README.md](./mcp/README.md) for setup instructions and server details.

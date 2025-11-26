@@ -25,6 +25,35 @@ Expert iOS development agent for Swift/SwiftUI projects.
 @ios-developer Set up Xcode Cloud CI/CD pipeline
 ```
 
+### [iOS Design Review](./agents/ios-design-review.md)
+
+iOS design review agent specializing in Apple HIG compliance and accessibility.
+
+- Human Interface Guidelines evaluation
+- VoiceOver and Dynamic Type testing
+- Multi-device and Dark Mode verification
+- Simulator testing via Mobile MCP
+
+**Usage:**
+```
+@ios-design-review Review the profile settings screen for HIG compliance
+```
+
+## Commands
+
+### [iOS Design Review Command](./commands/ios-design-review.md)
+
+Slash command for on-demand iOS design reviews.
+
+```
+/ios-design-review
+```
+
+## Resources
+
+- [iOS Design Principles](../../context/ios-design-principles.md) - HIG-based design checklist
+- [CLAUDE.md Snippet](./CLAUDE-SNIPPET.md) - Project integration for iOS visual checks
+
 ## Future Additions
 
 - Android developer agent (Kotlin/Jetpack Compose)
@@ -34,8 +63,9 @@ Expert iOS development agent for Swift/SwiftUI projects.
 
 ## Installation
 
-Copy agents to your Claude directory:
+Copy agents and commands to your Claude directory:
 
 ```bash
 cp -r agents/* ~/.claude/agents/
+cp -r commands/* ~/.claude/commands/
 ```
