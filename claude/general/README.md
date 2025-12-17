@@ -22,13 +22,6 @@ Lightweight security scanning workflow.
 - Severity classification and remediation guidance
 - GitHub Actions for automated security scanning
 
-## Future Additions
-
-- Documentation review workflow
-- Refactoring assistant
-- Test coverage analysis
-- Dependency audit workflow
-
 ## Installation
 
 Copy workflow assets to your Claude directory:

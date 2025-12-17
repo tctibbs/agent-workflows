@@ -9,11 +9,19 @@ Quick reference for workflow availability across AI coding assistants.
 | **General** |
 | Code Review | ✓ | · | ✗ | ✗ |
 | Security Review | ✓ | · | ✗ | ✗ |
+| **Development** |
+| Python Developer | ✓ | ✗ | ✗ | ✗ |
+| FastAPI Developer | ✓ | ✗ | ✗ | ✗ |
+| TypeScript Developer | ✓ | ✗ | ✗ | ✗ |
+| Backend Architect | ✓ | ✗ | ✗ | ✗ |
+| **Infrastructure** |
+| Deployment Engineer | ✓ | ✗ | ✗ | ✗ |
 | **Web** |
 | Design Review | ✓ | · | ✗ | ✗ |
 | **Mobile** |
 | iOS Developer | ✓ | ✗ | ✗ | ✗ |
 | iOS Design Review | ✓ | ✗ | ✗ | ✗ |
+| Mobile Security | ✓ | ✗ | ✗ | ✗ |
 
 **Legend:** ✓ Full · Partial ✗ Not available
 
