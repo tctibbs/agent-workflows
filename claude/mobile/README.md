@@ -25,7 +25,7 @@ Expert iOS development agent for Swift/SwiftUI projects.
 @ios-developer Set up Xcode Cloud CI/CD pipeline
 ```
 
-### [iOS Design Review](./agents/ios-design-review.md)
+### [iOS Design Reviewer](./agents/ios-design-reviewer.md)
 
 iOS design review agent specializing in Apple HIG compliance and accessibility.
 
@@ -36,7 +36,24 @@ iOS design review agent specializing in Apple HIG compliance and accessibility.
 
 **Usage:**
 ```
-@ios-design-review Review the profile settings screen for HIG compliance
+@ios-design-reviewer Review the profile settings screen for HIG compliance
+```
+
+### [Mobile Security Coder](./agents/mobile-security-coder.md)
+
+Expert in secure mobile coding practices for iOS applications.
+
+- Keychain Services and secure data storage
+- Biometric authentication (Touch ID, Face ID)
+- App Transport Security and certificate pinning
+- WebView security and input validation
+- OWASP MASVS compliance
+
+**Usage:**
+```
+@mobile-security-coder Implement secure credential storage with Keychain
+@mobile-security-coder Add biometric authentication with proper fallback
+@mobile-security-coder Configure WebView with security best practices
 ```
 
 ## Commands
@@ -53,13 +70,6 @@ Slash command for on-demand iOS design reviews.
 
 - [iOS Design Principles](../../context/ios-design-principles.md) - HIG-based design checklist
 - [CLAUDE.md Snippet](./CLAUDE-SNIPPET.md) - Project integration for iOS visual checks
-
-## Future Additions
-
-- Android developer agent (Kotlin/Jetpack Compose)
-- Flutter developer agent
-- React Native developer agent
-- Cross-platform testing workflows
 
 ## Installation
 

@@ -17,8 +17,3 @@ Automated UI/UX and front-end design critique workflow.
 - Accessibility, responsiveness, and visual consistency checks
 - CLAUDE.md snippet for project integration
 
-## Future Additions
-
-- Accessibility review workflow
-- Performance audit workflow
-- Cross-browser testing workflow

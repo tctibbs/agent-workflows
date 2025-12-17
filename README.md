@@ -15,7 +15,19 @@ These workflow packs are designed around how I prefer to structure reviews, orga
 ## 📦 Workflow Packs
 
 ### Claude
-[View Claude Workflows](./claude/README.md)
+
+| Category | Workflow | Description |
+|----------|----------|-------------|
+| **General** | [code-review](./claude/general/code-review/) | Pragmatic code review with severity triage |
+| **General** | [security-review](./claude/general/security-review/) | Security scanning and vulnerability assessment |
+| **Development** | [python](./claude/development/python/) | Python 3.12+, FastAPI, async patterns, uv, ruff |
+| **Development** | [typescript](./claude/development/typescript/) | Advanced types, generics, strict type safety |
+| **Development** | [backend](./claude/development/backend/) | API architecture, microservices, event-driven |
+| **Infrastructure** | [devops](./claude/infrastructure/devops/) | CI/CD, GitHub Actions, GitOps, containers |
+| **Web** | [design-review](./claude/web/design-review/) | UI/UX review with Playwright browser automation |
+| **Mobile** | [ios](./claude/mobile/) | iOS development, design review, mobile security |
+
+[View full Claude documentation](./claude/README.md)
 
 ### Gemini
 [View Gemini Workflows](./gemini/README.md)
