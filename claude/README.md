@@ -12,6 +12,9 @@ Architecture-informed code review with severity triage. GitHub Actions for autom
 #### [Security Review](./general/security-review/README.md)
 OWASP-based vulnerability detection with severity classification and remediation guidance.
 
+#### [Documentation](./general/documentation/README.md)
+Technical documentation, API docs, tutorials, and diagrams with specialized agents.
+
 ---
 
 ## Development Workflows
@@ -94,6 +97,7 @@ cp -r development/python/agents/* ~/.claude/agents/
 cp -r development/typescript/agents/* ~/.claude/agents/
 cp -r development/backend/agents/* ~/.claude/agents/
 cp -r infrastructure/devops/agents/* ~/.claude/agents/
+cp -r general/documentation/agents/* ~/.claude/agents/
 cp -r mobile/agents/* ~/.claude/agents/
 
 # Skills
@@ -101,6 +105,7 @@ cp -r development/python/skills/* ~/.claude/skills/
 cp -r development/typescript/skills/* ~/.claude/skills/
 cp -r development/backend/skills/* ~/.claude/skills/
 cp -r infrastructure/devops/skills/* ~/.claude/skills/
+cp -r general/documentation/skills/* ~/.claude/skills/
 
 # Commands
 cp -r general/code-review/commands/* ~/.claude/commands/

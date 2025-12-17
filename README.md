@@ -20,6 +20,7 @@ These workflow packs are designed around how I prefer to structure reviews, orga
 |----------|----------|-------------|
 | **General** | [code-review](./claude/general/code-review/) | Pragmatic code review with severity triage |
 | **General** | [security-review](./claude/general/security-review/) | Security scanning and vulnerability assessment |
+| **General** | [documentation](./claude/general/documentation/) | Technical docs, API docs, tutorials, diagrams |
 | **Development** | [python](./claude/development/python/) | Python 3.12+, FastAPI, async patterns, uv, ruff |
 | **Development** | [typescript](./claude/development/typescript/) | Advanced types, generics, strict type safety |
 | **Development** | [backend](./claude/development/backend/) | API architecture, microservices, event-driven |

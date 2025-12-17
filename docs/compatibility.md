@@ -9,6 +9,10 @@ Quick reference for workflow availability across AI coding assistants.
 | **General** |
 | Code Review | ✓ | · | ✗ | ✗ |
 | Security Review | ✓ | · | ✗ | ✗ |
+| Docs Architect | ✓ | ✗ | ✗ | ✗ |
+| API Documenter | ✓ | ✗ | ✗ | ✗ |
+| Tutorial Engineer | ✓ | ✗ | ✗ | ✗ |
+| Mermaid Expert | ✓ | ✗ | ✗ | ✗ |
 | **Development** |
 | Python Developer | ✓ | ✗ | ✗ | ✗ |
 | FastAPI Developer | ✓ | ✗ | ✗ | ✗ |
