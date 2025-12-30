@@ -19,26 +19,48 @@ Browser automation server that enables agents to interact with web pages in real
 
 ## Setup
 
-Add to your Claude Code MCP configuration:
-
-```json
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/playwright-mcp"]
-    }
-  }
-}
-```
-
 ### Prerequisites
 
 - Node.js 18+
+- Claude Code CLI
+
+### Installation
+
+Add Playwright MCP using the CLI command:
+
+```bash
+claude mcp add --transport stdio playwright -- npx -y @playwright/mcp@latest
+```
+
+This will:
+- Add the Playwright MCP server to your configuration
+- Store it in `~/.claude.json` (user scope) by default
+- Verify the connection on next restart
+
+**For project-specific configuration** (committed to git):
+```bash
+claude mcp add --transport stdio playwright --scope project -- npx -y @playwright/mcp@latest
+```
+
+This creates `.mcp.json` in your project root.
+
+### Verify Installation
+
+After adding, verify the configuration:
+
+```bash
+# List all configured MCP servers
+claude mcp list
+
+# Check Playwright connection status
+claude mcp get playwright
+```
+
+Then **restart Claude Code** and verify with `/mcp` command.
 
 ### Browser Installation
 
-After adding the MCP config, install Chromium:
+Install Chromium browser for Playwright:
 
 ```bash
 npx playwright install chromium
